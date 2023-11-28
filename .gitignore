@@ -1,0 +1,6 @@
+.history
+node_modules
+#node module files should be ignored
+#*.txt (meaning all files with text extension will be ignored)
+*.json
+.DS_Store
