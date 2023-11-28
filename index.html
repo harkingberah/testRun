@@ -1,0 +1,136 @@
+<html>
+  <head>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <style>
+
+
+/*translate3D(x,y,z)*/
+/*rotateX()*/
+/*rotate3D(x,y,z,deg)*/
+/*scaleX()*/
+/*scale3D(x,y,z)*/
+/*scale()*/
+/*skewX()*/
+/*skewY()*/
+/*skew()*/
+/*matrix()*/
+
+/*translate(x,y)*/
+/*rotate(deg)*/
+/*scaleX(x)*/
+/*scaleY(y)*/
+/*scale(x,y)*/
+/*skewX(x)*/
+/*skewY(y)*/
+/*skew(x,y)*/
+/*matrix(s,s,s,s,t,t)*/
+
+*{
+  border-box: box-sizing;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: grey;
+}
+@keyframes example{
+  from {background-color: teal;}
+  to{background-color: magenta;}
+}
+
+
+.container{
+  background-color: darkBlue;
+  display: flex;
+  gap: 2rem;
+  justify-content:center;
+  align-items: center;
+  height: 50vh;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.card{
+  background-color: coral;
+  height: 200px;
+  width: 200px;
+  
+  border-radius: 60px;
+  /*box-shadow: 4px 5px 1px 10px purple inset;*/
+  /*box-shadow: 1px 2px 3px red, 4px 5px 6px yellow, 7px 8px 9px green;*/
+   box-shadow: 1px 3px 5px 10px rgba(255, 0, 0, 0.2);
+  transform: translate(2px, -50px);
+  /*transform: matrix(1,0.2,0,1,0,0);*/
+  transition: 1.7s;
+}
+.card:hover{
+  box-shadow: 1px 2px 3px magenta, 4px 5px 6px cyan, 7px 8px 9px coral;
+  transform: translate(2px, 50px)
+  /*transform: matrix(-1,-0.2,-1,0,20,20);;*/
+  
+}
+.content p{
+  text-align: center;
+  text-shadow: 2px 1px 2px red;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+
+@media(max-width:400px){
+    .container{
+       background-color: yellow;
+       display: flex;
+       flex-direction: column;
+       height: 100%;
+
+    }
+    .card{
+      background-color: orange;
+      height: 100px;
+      width: 100px;
+      margin-top: 50px;
+      border-radius: 20px;
+      transform: rotate3d(1,1,1, 10deg);
+      transition: 1.2s;
+    }
+    .card:hover{
+      transform: rotate3s(-1,-1,-1,180deg);
+    }
+}
+
+
+/*object-fit cover*/
+
+/*object-position: 15% 100%;*/
+
+      </style>
+  </head>
+<body>
+  <div class="container">
+    <div class="card">
+        <img src="https://cdn.britannica.com/29/150929-050-547070A1/lion-Kenya-Masai-Mara-National-Reserve.jpg" height="100px" width="100%">
+        <div class="content">
+             <p>Akeju Akingbera</p>
+        </div>
+    </div>
+    
+    <div class="card">
+        <img src="https://cdn.britannica.com/29/150929-050-547070A1/lion-Kenya-Masai-Mara-National-Reserve.jpg" height="100px" width="100%">
+        <div class="content">
+             <p>Akeju Samson</p>
+        </div>
+    </div>
+    
+    <div class="card">
+        <img src="https://cdn.britannica.com/29/150929-050-547070A1/lion-Kenya-Masai-Mara-National-Reserve.jpg" height="100px" width="100%">
+        <div class="content">
+             <p>Samson Akingbera</p>
+        </div>
+    </div>
+  </div>
+    
+</body>
+</html>
